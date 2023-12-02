@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            vertical-align: bottom;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .image {
+            width: 272px;
+            height: 390px;
+            position: relative;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            display: inline-block;
+            transition: all .5s ease;
+            top: 20px;
+        }
+
+        .image:hover {
+            top: 5px;
+            box-shadow: 2px 2px 5px 2px #666;
+        }
+
+        .image img {
+            position: relative;
+            width: 272px;
+        }
+
+        .image .word {
+            position: relative;
+            text-align: left;
+            margin: 20px 16px;
+            padding: 0px 10px;
+            background-image: linear-gradient(to bottom, #ffffff4d, #f9f9f94d, #f3f3f34d, #ededed4d, #e7e7e74d, #d0d0d04d, #b8b8b84d, #a2a2a24d, #7777774d, #4e4e4e4d, #2929294d, #0000004d);
+            width: 88%;
+            height: 350px;
+            top: -390px;
+            transition: all .5s linear;
+            overflow: hidden;
+        }
+
+        .image .word :nth-of-type(1) {
+            position: absolute;
+            bottom: 10px;
+            font-weight: 700;
+            transition: all 1s ease;
+        }
+
+        .image .word :nth-of-type(2) {
+            position: absolute;
+            bottom: -20px;
+            visibility: hidden;
+            color: #ffffffc6;
+            transition: all 1s ease;
+        }
+
+        :hover .word :nth-of-type(1) {
+            position: absolute;
+            bottom: 50px;
+        }
+
+        :hover .word :nth-of-type(2) {
+            visibility: visible;
+            font-size: 14px;
+            bottom: 20px;
+        }
+
+        :hover .word {
+            background-image: linear-gradient(to bottom, #ffffff4d, #f9f9f94d, #f3f3f34d, #ededed4d, #e7e7e74d, #d0d0d04d, #b8b8b84d, #a2a2a24d, #7777774d, #4e4e4e5c, #29292961, #0000009c);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function cc() {
+            document.write(`   <a href="#" class="image">
+        <img src="../Snipaste_2023-11-23_08-09-58.png">
+        <div class="word">
+            <p>> 日月轮转 —— 匠心打造</p>
+            <p>> 给你非同一般的体验</p>
+        </div>
+    </a>`);
+        }
+        for (let i = 0; i < 16; i++) {
+            cc();
+            if (i % 4 == 3) {
+                document.write(`<br>`)
+            }
+        }
+    </script>
+</body>
+
+</html>
