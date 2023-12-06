@@ -61,20 +61,22 @@
             visibility: hidden;
             color: #ffffffc6;
             transition: all 1s ease;
+            font-size: 20px;
         }
 
-        :hover .word :nth-of-type(1) {
+        .image:hover .word :nth-of-type(1) {
             position: absolute;
             bottom: 50px;
+            font-size: 19px;
         }
 
-        :hover .word :nth-of-type(2) {
+        .image:hover .word :nth-of-type(2) {
             visibility: visible;
             font-size: 14px;
             bottom: 20px;
         }
 
-        :hover .word {
+        .image:hover .word {
             background-image: linear-gradient(to bottom, #ffffff4d, #f9f9f94d, #f3f3f34d, #ededed4d, #e7e7e74d, #d0d0d04d, #b8b8b84d, #a2a2a24d, #7777774d, #4e4e4e5c, #29292961, #0000009c);
         }
     </style>
@@ -83,17 +85,15 @@
 <body>
 
     <script>
-        function cc() {
-            document.write(`   <a href="#" class="image">
-        <img src="../Snipaste_2023-11-23_08-09-58.png">
+
+        for (let i = 0; i < 8; i++) {
+            document.write(`<a href="#${i}" class="image">
+        <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/card.png">
         <div class="word">
             <p>> 日月轮转 —— 匠心打造</p>
             <p>> 给你非同一般的体验</p>
         </div>
     </a>`);
-        }
-        for (let i = 0; i < 16; i++) {
-            cc();
             if (i % 4 == 3) {
                 document.write(`<br>`)
             }

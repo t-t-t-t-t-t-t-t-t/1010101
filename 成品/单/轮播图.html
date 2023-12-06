@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.body.style.backgroundColor = 'transparent';
+        document.body.style.background = 'no-repeat';
+        document.body.style.backgroundPosition = 'top center';
+        document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.transition = "all 2.5s";
+        document.body.style.backgroundImage = `url(https://gitcode.net/T_J_J_/picture/-/raw/master/02.jpg)`
+        setInterval(function () {
+            let rand = Math.floor(Math.random() * 65 + 1);
+            if (rand < 10) rand = '0' + rand;
+            document.body.style.backgroundImage = `url(https://gitcode.net/T_J_J_/picture/-/raw/master/${rand}.jpg)`;
+        }, 10000);
+    </script>
+</body>
+
+</html>

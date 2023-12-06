@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-weight: 100;
+        }
+
+        h3 {
+            font-weight: 100;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: kaiti;
+        }
+
+        body {
+            background-image: linear-gradient(to right bottom, #20211d, #31322d, #44453d, #57584e, #6b6c60, #727366, #797a6c, #808172, #7b7c6e, #767769, #727265, #6d6d61);
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+        }
+
+        .card {
+            height: 220px;
+            width: 480px;
+            position: relative;
+        }
+
+        .rolebg {
+            height: 220px;
+            width: 480px;
+            overflow: hidden;
+            transform-origin: bottom;
+            transition: all 2.5s;
+        }
+
+        .rolebg img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .role {
+            height: 240px;
+            width: 480px;
+            position: absolute;
+            bottom: 0px;
+            transform-origin: bottom;
+            transition: all 2s;
+        }
+
+        .role img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .word {
+            height: 220px;
+            width: 480px;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: 0px 0px 1px rgb(114 114 102 / 67%);
+            font-size: 15px;
+            position: absolute;
+            bottom: -170px;
+            opacity: 0;
+            transition: all 3s;
+        }
+
+        .word .title .top {
+            font-weight: 500;
+        }
+
+        .word .title .author {
+            font-size: 14px;
+        }
+
+        .card:hover .rolebg {
+            transform: perspective(1000px) rotateX(40deg) skewX(-20deg);
+        }
+
+        .card:hover .role {
+            transform: scale(1.2)
+        }
+
+        .card:hover .word {
+            opacity: 1;
+            bottom: -80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="rolebg">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/background2.png">
+            </div>
+            <div class="role">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/girl2.png">
+            </div>
+            <div class="word">
+                <h1 class="title">
+                    <i class="top">虞美人</i> <i class="author">—— 李煜</i>
+                </h1>
+                <h3 clsaa="p1">
+                    风回小院庭芜绿，柳眼春相续。
+                </h3>
+                <h3 clsaa="p2">
+                    <i>凭阑半日独无言，</i><i class="si" style="color:#fff; font-size:20px;font-weight:500;">依旧竹声新月似当年。</i>
+                </h3>
+                <h3 clsaa=" p3">
+                    笙歌未散尊罍在，池面冰初解。
+                </h3>
+                <h3 clsaa="p4">
+                    烛明香暗画堂深，满鬓青霜残雪<i style="color:#fff; font-size:20px;font-weight:500;">思难任</i>。
+                </h3>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
