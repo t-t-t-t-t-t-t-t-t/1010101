@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #000;
+            height: 10000px;
+            color: #fff;
+        }
+
+
+
+        @keyframes grow1 {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 750px;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: white;
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .content {
+            margin-top: 400px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .animation1 {
+            white-space: nowrap;
+            animation: grow1 8s steps(34) 500ms normal forwards,
+                blink 1s steps(34) 1s infinite normal forwards;
+        }
+
+        .p1 {
+            font-size: 30px;
+            overflow: hidden;
+            border-right: 2px solid white;
+            width: 725px;
+            white-space: nowrap;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p class="animation1 p1">
+            给每一个喜欢 DARLING 的人 ...... JUST FOR THE LOVE
+        </p>
+    </div>
+    <script>
+
+        alert("呜呜呜~~各位爷都来看看吧")
+        alert("有些文字的对其")
+        alert("对了、点一下页面才能播放音乐勒")
+        let i = 0;
+        setInterval(function () { i++; if (i == 10) { location.href = "http://127.0.0.1:5500/%E6%88%90%E5%93%81/%E5%8D%95/Darling_In_The_Franxx.html"; } }, 1000);
+    </script>
+</body>
+
+</html>

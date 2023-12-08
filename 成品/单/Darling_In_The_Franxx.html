@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Darling</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: normal;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            text-wrap: nowrap;
+        }
+
+        i {
+            font-style: none;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-size: 16px;
+        }
+
+
+        body {
+            background: url(https://gitcode.net/T_J_J_/picture/-/raw/master/back02.png)top center /cover;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1417px;
+        }
+
+        .card {
+            height: 353px;
+            width: 225px;
+            position: relative;
+            perspective: 1000px;
+
+        }
+
+        .rolebg {
+            height: 353px;
+            width: 225px;
+            position: absolute;
+            filter: grayscale(40%);
+            opacity: calc(60%);
+            transition: all 3s;
+            transform-origin: center;
+        }
+
+        .rolebg img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .role {
+            height: 353px;
+            width: 225px;
+            position: absolute;
+            bottom: 0px;
+            transform-origin: bottom;
+            transition: all 5s;
+        }
+
+        .role img {
+            height: 100%;
+            width: 100%;
+            transition: all 2s;
+        }
+
+        .card:hover #a1 {
+            transform: rotateY(20deg)rotateX(5deg) translateZ(-300px);
+        }
+
+        .card:hover #a10 {
+            transform: rotateY(25deg)rotateX(5deg) translateZ(-310px)translateY(-30px);
+
+            opacity: calc(40%);
+        }
+
+        .card:hover #a2 {
+            transform: rotateY(-20deg)rotateX(5deg)translateZ(-300px);
+        }
+
+        .card:hover #a20 {
+            opacity: calc(40%);
+            transform: rotateY(-25deg)rotateX(5deg)translateZ(-310px)translateY(-30px);
+        }
+
+        .card:hover #a3 {
+            transform-origin: bottom;
+            transform: rotateY(0deg) translateY(-40px)rotateX(30deg)scale(1.2);
+        }
+
+        .card:hover .role {
+            transform: rotateY(0deg) rotateX(-5deg)scale(1.3);
+        }
+
+        .word .title {
+            transform: translate(-20px, 80px);
+            font-size: 20px;
+            color: #005B52;
+            font-weight: 700;
+            width: 220px;
+            padding: 0px 2px;
+            margin: 0px auto;
+            border-right: solid 2px rgb(255, 255, 255);
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+            animation: grow1 1.5s steps(7) 500ms normal forwards, grow2 2s steps(10) 3s normal forwards,
+                blink 1s steps(21) 1s infinite normal forwards;
+        }
+
+        @keyframes grow1 {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 95px;
+            }
+        }
+
+        @keyframes grow2 {
+            from {
+                width: 95px;
+            }
+
+            to {
+                width: 265px;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: white;
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .word {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .word .darling {
+            transform: translate(0px, -170px);
+            color: rgb(255, 157, 173);
+            transition: all ease-in-out 2s;
+            opacity: 0;
+            font-weight: 700;
+        }
+
+        .card:hover .word .darling {
+            opacity: 1;
+            color: #00C9B7;
+        }
+
+        .word .darling2 {
+            transform: translate(0px, -150px);
+            color: rgb(255, 157, 173);
+            transition: all ease-in-out 500ms 2s;
+            font-size: 30px;
+            font-weight: 700;
+            opacity: 0;
+        }
+
+        .card:hover .word .darling2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <audio class="backgroundmusic1" preload="metadata">
+        <source src="https://gitcode.net/T_J_J_/picture/-/raw/master/music/darling_first.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="backgroundmusic2" loop preload="metadata">
+        <source src="https://gitcode.net/T_J_J_/picture/-/raw/master/music/background_music.ogg" type="audio/ogg">
+    </audio>
+    <audio class="imagvoice" preload="metadata">
+        <source src="https://gitcode.net/T_J_J_/picture/-/raw/master/music/darling_voice1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="content">
+        <div class="card">
+            <div class="rolebg" id="a1">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/02bg.png">
+            </div>
+            <div class="rolebg" id="a10">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/02bg.png">
+            </div>
+            <div class="rolebg" id="a2">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/02bg.png">
+            </div>
+            <div class="rolebg" id="a20">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/02bg.png">
+            </div>
+            <div class="rolebg" id="a3">
+                <img src="https://gitcode.net/T_J_J_/picture/-/raw/master/02bg.png">
+            </div>
+
+            <div class="role">
+                <img class="image" src="https://gitcode.net/T_J_J_/picture/-/raw/master/darliing4.png">
+            </div>
+            <div class="word">
+                <h1 class="title ">DARLING IN THE FRANXX</h1>
+                <h1 class="darling">今から君が僕の</h1>
+                <h1 class="darling2">
+                    Darlingだ!
+                </h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        const begin = document.querySelector(".backgroundmusic1");
+        const after = document.querySelector(".backgroundmusic2");
+        const voice = document.querySelector(".imagvoice");
+        const card = document.querySelector(".card");
+        const all = document.querySelector(".content");
+        const role = document.querySelector(".image");
+        const b = document.querySelector(".darling");
+        const r = document.querySelector(".darling2");
+        let word = [
+            { big: "Darlingだ!", small: "今から君が僕の" },
+            { big: "Darlingだ!", small: "今から君が僕の" },
+            { big: "エッチな人だ", small: "君は" },
+            { big: "Darling", small: "素敵だったよ" },
+            { big: "Darling", small: "なんつって" },
+            { big: "Darling", small: "おはよう" },
+        ]
+        function aa() {
+
+            begin.play();
+            all.removeEventListener("click", aa);
+        }
+        all.addEventListener("click", aa)
+        begin.addEventListener("ended", function () { after.play(); })
+        card.addEventListener("mouseover", function () {
+            let ran = Math.floor(Math.random() * 6 + 1);
+            b.innerHTML = `${word[ran - 1].small}`;
+            r.innerHTML = `${word[ran - 1].big}`;
+            console.log(word[0].small)
+            console.log(word[0].big)
+            role.src = `https://gitcode.net/T_J_J_/picture/-/raw/master/darliing${ran}.png`
+            voice.src = `https://gitcode.net/T_J_J_/picture/-/raw/master/music/darling_voice${ran}.mp3`
+            voice.play()
+        })
+    </script>
+</body>
+
+</html>
