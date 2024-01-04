@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .content {
+            height: 270px;
+            width: 480px;
+            margin: 100px auto;
+            position: relative;
+            background-color: #aaa;
+            border: 1px solid #666;
+        }
+
+        table {
+            height: 100%;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead tr {
+            height: 19%;
+            width: 100%;
+        }
+
+        tbody tr {
+            height: 27%;
+            background-color: #fff;
+        }
+
+        thead tr th {
+            width: 22.5%;
+            border-left: 1px solid #666;
+        }
+
+        thead tr th:nth-child(1) {
+            width: 10%;
+            border-left: 0px;
+        }
+
+        tbody tr td:nth-child(1) {
+            width: 10%;
+            border-left: 0px;
+        }
+
+        tbody tr td {
+            width: 22.5%;
+            text-align: center;
+            border-top: 1px solid #666;
+            border-left: 1px solid #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="checkAll"><label for="checkAll">全选</label></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="checkli"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="checkli"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" class="checkli"></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //如果子框全选了，那全选框也要全选；
+        let cnt = 0;
+        const all = document.querySelector('#checkAll');
+        const li = document.querySelectorAll('.checkli');
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', function () {
+
+                if (li[i].checked == true) {
+                    cnt++;
+                    console.log(cnt);
+                }
+                if (li[i].checked == false) {
+                    cnt--;
+                    console.log(cnt);
+                }
+                if (cnt == li.length) {
+                    all.checked = true;
+                }
+                else {
+                    all.checked = false;
+                }
+            })
+        }
+        function checkAll() {
+            if (all.checked) {
+                for (let i = 0; i < li.length; i++) {
+                    li[i].checked = true;
+                }
+                cnt = li.length;
+                console.log(cnt);
+            }
+            if (!all.checked) {
+                for (let i = 0; i < li.length; i++) {
+                    li[i].checked = false;
+                }
+                cnt = 0;
+                console.log(cnt);
+            }
+        }
+        all.addEventListener('click', checkAll);
+
+    </script>
+</body>
+
+</html>

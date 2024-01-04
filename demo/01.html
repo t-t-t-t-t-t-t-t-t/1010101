@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: none;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        i {
+            text-decoration: none;
+            font-style: normal;
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            height: 300px;
+            width: 180px;
+            background-color: rgb(0, 0, 0);
+            margin: 150px auto;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            flex-wrap: wrap;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-content: space-around;
+        }
+
+        .now {
+            height: 32px;
+            width: 80%;
+
+        }
+
+        .time {
+            height: 32px;
+            width: 80%;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="time">
+            <i class="d">00</i>
+            :
+            <i class="h">00</i>
+            :
+            <i class="m">00</i>
+            :
+            <i class="s">00</i>
+        </div>
+    </div>
+    <script>
+        setInterval(function () {
+            let now = +new Date();
+            let last = +new Date('2023-12-17 24:00:00')
+            let time = last - now;
+            time /= 1000;
+            now = Date().Get;
+
+            document.querySelector('.time .d').innerHTML = parseInt(time / 3600 / 24) < 10 ? '0' + parseInt(time / 3600 / 24) : parseInt(time / 3600 / 24);
+            document.querySelector('.time .h').innerHTML = parseInt(time / 3600 % 24) < 10 ? '0' + parseInt(time / 3600 % 24) : parseInt(time / 3600 % 24);
+            document.querySelector('.time .m').innerHTML = parseInt(time / 60 % 60) < 10 ? '0' + parseInt(time / 60 % 24) : parseInt(time / 60 % 24);
+            document.querySelector('.time .s').innerHTML = parseInt(time % 60) < 10 ? '0' + parseInt(time % 60) : parseInt(time % 60);
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

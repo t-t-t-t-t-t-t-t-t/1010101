@@ -1,0 +1,159 @@
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #1b3f57;
+}
+
+.content {
+    height: 300px;
+    width: 500px;
+    position: relative;
+}
+
+.Aglass {
+    filter: blur(3px);
+    z-index: 0;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    height: 300px;
+    width: 500px;
+    background: linear-gradient(rgba(158, 158, 158, 0.249), transparent);
+    border: 1px solid #30303046;
+    border-radius: 10px;
+    box-shadow: 0px 25px 25px rgba(85, 85, 85, 0.128);
+}
+
+div[class='glass'] {
+    filter: blur(10px);
+    position: absolute;
+    backdrop-filter: blur(10px);
+    border: 1px solid #30303046;
+    border-radius: 10px;
+}
+
+.glass1 {
+    position: absolute;
+    filter: blur(10px);
+    top: -30px;
+    left: 480px;
+    height: 60px;
+    width: 60px;
+    background: rgba(255, 0, 0, 0.275);
+}
+
+.glass2 {
+    filter: blur(10px);
+    position: absolute;
+    top: 10px;
+    left: 500px;
+    height: 80px;
+    width: 30px;
+    background: rgba(34, 0, 255, 0.518);
+}
+
+.glass3 {
+    filter: blur(10px);
+    position: absolute;
+    top: -30px;
+    left: 400px;
+    height: 30px;
+    width: 80px;
+    background: rgba(66, 249, 0, 0.536);
+}
+
+.glass4 {
+    top: -30px;
+    left: 400px;
+    height: 30px;
+    width: 80px;
+    filter: blur(10px);
+    position: absolute;
+    background: rgba(170, 255, 0, 0.774);
+    transition: all 1S;
+}
+
+.glass5 {
+    filter: blur(10px);
+    position: absolute;
+    top: 10px;
+    left: 500px;
+    backdrop-filter: blur(10px);
+    height: 80px;
+    width: 30px;
+    background: rgba(7, 255, 226, 0.377);
+    transition: all 1S;
+}
+
+.content .resume {
+    font-size: 50px;
+    font-weight: 400;
+    position: absolute;
+    top: 110px;
+    left: 200px;
+    opacity: 1;
+    /* filter: blur(5px); */
+    transition: all 2s .5s;
+    color: #66666600;
+    text-shadow: 2px -1px 1px #000000;
+}
+
+div[class^='pr'] {
+    height: 300px;
+    width: 501px;
+    z-index: 1;
+    position: absolute;
+    filter: blur(3px);
+    transition: all 1s;
+}
+
+.pr1 {
+    left: 0px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.336), rgba(255, 255, 255, 0.379) 50%, transparent 50%, transparent 100%)
+}
+
+.pr2 {
+    left: 0px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.336), rgba(255, 255, 255, 0.379) 50%, transparent 50%, transparent 100%)
+}
+
+.pr3 {
+    right: 0px;
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.336), rgba(255, 255, 255, 0.379) 50%, transparent 50%, transparent 100%)
+}
+
+.pr4 {
+    right: 0px;
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0.336), rgba(255, 255, 255, 0.379) 50%, transparent 50%, transparent 100%)
+}
+
+.content:hover .resume {
+    opacity: 1;
+    /* filter: blur(0px); */
+
+    color: transparent;
+    text-shadow: 5px 5px 5px #ff0000;
+}
+
+.content:hover div[class^='pr'] {
+    width: 200px;
+
+}
+
+.content:hover .glass5 {
+    left: -30px;
+}
+
+.content:hover .glass4 {
+    bottom: -10px;
+    left: 480px;
+    height: 50px;
+    width: 50px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 50px;
+}

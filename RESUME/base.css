@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "阿里妈妈刀隶体 Regular";
+    font-weight: 400;
+    src: url("./font/AlimamaDaoLiTi.woff2") format("woff2"),
+        url("./font/AlimamaDaoLiTi.woff") format("woff");
+    font-display: swap;
+}
+
+* {
+    font-family: "阿里妈妈刀隶体 Regular";
+}
+
+i {
+    font-style: normal
+}
+
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+div,
+pre,
+body,
+code,
+form,
+input,
+legend,
+button,
+figure,
+fieldset,
+textarea,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+img,
+abbr,
+input,
+button,
+acronym,
+fieldset,
+textarea {
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+button,
+option,
+textarea,
+optgroup {
+
+    outline: none;
+}
+
+a,
+del,
+ins {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}

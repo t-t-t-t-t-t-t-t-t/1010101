@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tab {
+            height: 270px;
+            width: 480px;
+            background-color: aqua;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .tab .tab_list {
+            height: 10%;
+            background-color: blue;
+        }
+
+        .tab .tab_list ul {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+        }
+
+        .tab .tab_list .tab_con {
+            width: 20%;
+        }
+
+        .tab_items {
+            position: relative;
+            height: 90%;
+        }
+
+        .tab_items .item {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            opacity: 0;
+        }
+
+        .tab_items .item:nth-child(1) {
+            background-color: red;
+        }
+
+        .active1 {
+            background-color: rgb(0, 255, 0);
+        }
+
+        .tab_items .active2 {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="tab_con active1">1</li>
+                <li class="tab_con">2</li>
+                <li class="tab_con">3</li>
+                <li class="tab_con">4</li>
+                <li class="tab_con">5</li>
+            </ul>
+        </div>
+        <div class="tab_items">
+            <div class="item active2">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </div>
+    <script>
+        let tab_con = document.querySelectorAll('.tab_con');
+        for (let i = 0; i < 5; i++) {
+            tab_con[i].addEventListener('mouseenter', function () {
+                let active = document.querySelector('.active1')
+                active.classList.remove('active1')
+                this.classList.add('active1');
+                let item_active = document.querySelector(`.tab_items .item:nth-child(${i + 1})`);
+                let now_active = document.querySelector('.tab_items .active2')
+                now_active.classList.remove('active2')
+                item_active.classList.add('active2')
+            })
+        }
+
+    </script>
+</body>
+
+</html>
